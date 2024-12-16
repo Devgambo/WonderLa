@@ -1,0 +1,14 @@
+##prereq
+    1> upload your db online (use mongo atlas)
+    2> now use Mongo_store to upload your sessions (its a add on to express sessions)
+        - just create a {const store = MongoStore.create({}
+                                                    add stuff...
+                                                                )}
+        - then add this store to sessionOptions and your good to go.
+
+## Deployment
+        we'll you render  
+    1>   -add this to package.json
+         "engine"{
+                "node": (nodeversion)
+            }                                              

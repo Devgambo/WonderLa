@@ -1,0 +1,41 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3>Edit This Listing</h3>
+    <form class="needs-validation" novalidate method="post" action="/listings/<%= listing._id %>?_method=PUT" enctype="multipart/form-data">
+        <div class="row"> 
+            <div class="col-8 offset-2">
+                <div class="mb-3">
+                    <label for="title" class="form-lable">Title</label>
+                    <input required class="form-control" type="text" name="listing[title]" value="<%= listing.title%>">
+                </div>
+                <div class="mb-3">
+                    <label class="form-lable" for="description">description</label>
+                    <textarea required class="form-control" type="text" name="listing[description]"><%= listing.description %>  </textarea>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label class="form-lable" for="price">Price</label>
+                        <input required class="form-control" type="number" name="listing[price]" value="<%= listing.price %>">
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label class="form-lable" for="location">Location</label>
+                        <input required class="form-control" type="text" name="listing[location]" value="<%= listing.location %>">
+                    </div>
+                </div>
+                <div class="mb-3 w-30 ">
+                    Original listing Image <br>
+                    <img width="200" src="<%= originalImageUrl %>" alt="img">
+                </div>
+                <div class="mb-3">
+                    <label class="form-lable" for="image">Upload new Image</label>
+                    <input class="form-control" type="file" name="listing[image]">
+                </div>
+                <div class="mb-3">
+                    <label class="form-lable" for="country">Country</label>
+                    <input required class="form-control" type="text" name="listing[country]" value="<%= listing.country %>">
+                </div>
+                <button class="btn btn-danger">Done</button>
+            </div>
+        </div>
+    </form>
+</body>

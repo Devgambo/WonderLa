@@ -1,0 +1,12 @@
+##IMAGE UPLOAD
+    1)  form capable of sending files
+    2)  3rd party service to save files
+    3)  Now we'll save the file url-link in mongo provided by cloudinary (*in  this case)
+
+we used cloudinary in this case read docs when to use
+    - setup .end (install)
+        npm i dotenv
+    - setup cloudConfig.js 
+    - install these libraries
+        npm i cloudinary
+        npm i multer-storage-cloudinary
